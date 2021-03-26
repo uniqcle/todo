@@ -9,7 +9,7 @@ function createTodoItem(title){
 
     const editInput = document.createElement('input');
     editInput.type = 'text';
-    editInput.className = 'textField';
+    editInput.className = 'textfield';
 
     const editButton = document.createElement('button')
     editButton.innerText = 'изменить';
@@ -24,7 +24,7 @@ function createTodoItem(title){
 
     listItem.appendChild(checkbox);
     listItem.appendChild(label);
-    listItem.appendChild(editInput);
+    listItem.appendChild(editButton);
     listItem.appendChild(deleteButton);
 
     return listItem;
@@ -33,8 +33,10 @@ function createTodoItem(title){
 function addTodoItem(e){
     e.preventDefault();
     if(addInput.value === '') return alert('Необходимо ввести название задачи')
-    const listItem = createTodoItem( addInput.value );
+    const todoItem = createTodoItem( addInput.value );
 
+    todoList.appendChild(todoItem);
+    addInput.value = '';
 }
 
 
