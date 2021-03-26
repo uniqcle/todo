@@ -26,7 +26,7 @@ function createTodoItem(title){
     listItem.appendChild(label);
     listItem.appendChild(editInput);
     listItem.appendChild(deleteButton);
-console.log(listItem)
+
     return listItem;
 }
 
